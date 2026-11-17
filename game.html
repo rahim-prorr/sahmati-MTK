@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12100d">
+  <meta name="description" content="Сыграйте в шахматы вдвоём за одним устройством.">
+  <title>Играть в шахматы — Шахматы Ингушетии</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="chess-page">
+  <header class="header" id="header">
+    <a class="logo" href="index.html" aria-label="Шахматы Ингушетии — главная"><span class="logo-mark">♞</span><span>Шахматы Ингушетии</span></a>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="history.html">История шахмат</a><a href="ingushetia.html">Ингушетия</a><a href="ingush-chess.html">Ингуши и шахматы</a><a href="game.html" class="active" aria-current="page">Играть</a><a href="players.html">Игроки</a></nav>
+  </header>
+  <main class="main chess-main">
+    <section class="game-panel setup-panel" data-reveal>
+      <div class="eyebrow">♟ ШАХМАТЫ ИНГУШЕТИИ</div>
+      <h1>Время сделать ход</h1>
+      <p class="setup-copy">Классические шахматы для двух игроков за одним устройством.</p>
+      <div class="players-select">
+        <div class="select-block">
+          <label for="whitePlayer">♔ Белые</label>
+          <select id="whitePlayer"><option value="">Белые</option></select>
+        </div>
+        <div class="select-block">
+          <label for="blackPlayer">♚ Чёрные</label>
+          <select id="blackPlayer"><option value="">Чёрные</option></select>
+        </div>
+      </div>
+      <button class="btn-primary start-button" id="startGameBtn" type="button">Начать партию <span aria-hidden="true">→</span></button>
+      <p class="setup-hint">Игроков можно добавить на странице <a href="players.html">«Игроки»</a>. Если игроки не выбраны, можно играть под названиями «Белые» и «Чёрные».</p>
+    </section>
+
+    <section class="saved-games-section" data-reveal="fade" aria-labelledby="savedGamesHeading">
+      <div class="section-heading"><div><h2 id="savedGamesHeading">Сохранённые партии</h2><p>Продолжи игру с того же хода в этом браузере.</p></div></div>
+      <div id="savedGamesList"><div class="empty-state"><span class="empty-state-icon">♟</span><strong>Пока нет сохранённых партий</strong><p>Начни игру и нажми «Сохранить партию».</p></div></div>
+    </section>
+
+    <section class="board-section chess-layout" id="boardSection" hidden>
+      <div class="board-column">
+        <div class="player-strip opponent-strip"><span class="player-avatar">♚</span><div><strong id="blackNameLabel">Чёрные</strong><small>Верхняя сторона</small></div><span class="side-tag">ЧЁРНЫЕ</span></div>
+        <div class="board-frame"><div class="board" id="board" role="group" aria-label="Шахматная доска"></div></div>
+        <div class="player-strip current-strip"><span class="player-avatar">♔</span><div><strong id="whiteNameLabel">Белые</strong><small>Нижняя сторона</small></div><span class="side-tag">БЕЛЫЕ</span></div>
+        <div class="game-status-wrap"><span class="status-dot" aria-hidden="true"></span><p class="game-status" id="gameStatus" aria-live="polite">Белые ходят первыми.</p></div>
+        <div class="game-actions">
+          <button class="btn-secondary" id="undoMoveBtn" type="button" disabled>↶ Отменить ход</button>
+          <button class="btn-primary" id="saveGameBtn" type="button">▣ Сохранить партию</button>
+          <button class="btn-secondary" id="claimDrawBtn" type="button" disabled>½ Заявить ничью</button>
+          <button class="btn-secondary" id="flipBoardBtn" type="button" aria-pressed="false">⇅ Перевернуть доску</button>
+          <button class="btn-secondary" id="newGameBtn" type="button">＋ Новая партия</button>
+        </div>
+      </div>
+      <aside class="moves-panel" data-reveal="right" aria-label="История партии">
+        <div class="moves-heading"><div><span class="eyebrow">ПАРТИЯ</span><h2>Ходы</h2></div><span class="moves-icon">☷</span></div>
+        <div class="turn-card"><span class="turn-label">СЕЙЧАС ХОДЯТ</span><strong id="turnIndicator">♔ Белые</strong></div>
+        <div class="move-list" id="moveList" aria-live="polite"><p class="move-empty">Ходы появятся здесь после начала партии.</p></div>
+        <div class="rules-note"><strong>Правила</strong><p>Ходы выполняются по классическим шахматным правилам. Нажми на фигуру, чтобы увидеть доступные клетки.</p></div>
+      </aside>
+    </section>
+  </main>
+  <footer class="footer"><div class="footer-inner">
+    <div><p class="brand">♞ Шахматы Ингушетии</p><p>© 2026 · Играй честно. Думай на ход вперёд.</p></div>
+    <nav aria-label="Нижняя навигация"><a href="index.html">Главная</a><a href="history.html">История шахмат</a><a href="ingushetia.html">Ингушетия</a><a href="ingush-chess.html">Ингуши и шахматы</a><a href="game.html">Играть</a><a href="players.html">Игроки</a></nav>
+  </div></footer>
+  <script src="app.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>

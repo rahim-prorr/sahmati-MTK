@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12100d">
+  <meta name="description" content="Играй в шахматы, изучай историю игры и Ингушетии, знакомься с ингушскими шахматистами.">
+  <title>Шахматы Ингушетии — Главная</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <header class="header" id="header">
+    <a class="logo" href="index.html" aria-label="Шахматы Ингушетии — главная"><span class="logo-mark">♞</span><span>Шахматы Ингушетии</span></a>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Главная навигация"><a href="index.html" class="active" aria-current="page">Главная</a><a href="history.html">История шахмат</a><a href="ingushetia.html">Ингушетия</a><a href="ingush-chess.html">Ингуши и шахматы</a><a href="game.html">Играть</a><a href="players.html">Игроки</a></nav>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-reveal>Шахматы · Ингушетия</span>
+        <h1 data-reveal style="--d:.1s">Каждый ход<br>имеет <em>значение</em>.</h1>
+        <p data-reveal style="--d:.2s">Сыграй партию за одной доской, узнай историю шахмат и Ингушетии, познакомься с ингушскими гроссмейстерами и возвращайся к сохранённым играм в любое время.</p>
+        <div class="hero-actions" data-reveal style="--d:.3s">
+          <a href="game.html" class="btn-primary">♟ Начать игру</a>
+          <a href="ingush-chess.html" class="btn-secondary">Шахматы у ингушей</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span class="float-piece">♞</span><span class="float-piece">♛</span><span class="float-piece">♜</span></div>
+    </section>
+
+    <section class="stats" aria-label="Шахматы в цифрах">
+      <div class="card stat" data-reveal data-glow><strong data-count="64">64</strong><span>клетки на доске — и бесконечное число партий</span></div>
+      <div class="card stat" data-reveal data-glow><strong data-count="1500" data-suffix="+">1500+</strong><span>лет истории игры — от чатуранги до наших дней</span></div>
+      <div class="card stat" data-reveal data-glow><strong data-count="32">32</strong><span>фигуры, из которых рождается стратегия</span></div>
+    </section>
+
+    <section class="page-block">
+      <div class="section-heading" data-reveal><div><span class="eyebrow">Разделы сайта</span><h2 style="margin-top:12px">Что внутри</h2></div></div>
+      <div class="feature-grid">
+        <a class="feature-card" href="history.html" data-reveal data-glow><span class="ico">📜</span><h3>История шахмат</h3><p>От древней Индии и Персии до компьютеров и онлайн-турниров.</p><span class="more">Читать →</span></a>
+        <a class="feature-card" href="ingushetia.html" data-reveal data-glow><span class="ico">🏔️</span><h3>История Ингушетии</h3><p>Горы, боевые башни, испытания и возрождение — путь народа и республики.</p><span class="more">Читать →</span></a>
+        <a class="feature-card" href="ingush-chess.html" data-reveal data-glow><span class="ico">♞</span><h3>Ингуши и шахматы</h3><p>Федерация шахмат, школьные уроки и известные шахматисты.</p><span class="more">Читать →</span></a>
+        <a class="feature-card" href="game.html" data-reveal data-glow><span class="ico">🎮</span><h3>Играть</h3><p>Партия вдвоём на одном устройстве с сохранением и рейтингом.</p><span class="more">К доске →</span></a>
+      </div>
+    </section>
+
+    <section class="top-players" data-reveal>
+      <div class="section-heading"><div><h2>Рейтинг игроков</h2><p>Три лучших игрока твоего клуба</p></div><a href="players.html">Все игроки →</a></div>
+      <div class="top3-container" id="top3Container"><p class="empty">Пока нет игроков. Добавь первого участника клуба.</p></div>
+    </section>
+
+    <section class="saved-games-section" data-reveal>
+      <div class="section-heading"><div><h2>Продолжить партию</h2><p>Сохранённые игры доступны в этом браузере</p></div><a href="game.html">Открыть доску →</a></div>
+      <div id="savedGamesList"><div class="empty-state"><span class="empty-state-icon">♟</span><strong>Пока нет сохранённых партий</strong><p>Во время игры нажми «Сохранить партию», чтобы продолжить позже.</p></div></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="footer-inner">
+    <div><p class="brand">♞ Шахматы Ингушетии</p><p>© 2026 · Играй честно. Думай на ход вперёд.</p></div>
+    <nav aria-label="Нижняя навигация"><a href="index.html">Главная</a><a href="history.html">История шахмат</a><a href="ingushetia.html">Ингушетия</a><a href="ingush-chess.html">Ингуши и шахматы</a><a href="game.html">Играть</a><a href="players.html">Игроки</a></nav>
+  </div></footer>
+  <script src="app.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>

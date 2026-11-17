@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12100d">
+  <meta name="description" content="Создавай участников клуба и следи за рейтингом.">
+  <title>Шахматы — Игроки</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+  <header class="header" id="header">
+    <a class="logo" href="index.html" aria-label="Шахматы Ингушетии — главная"><span class="logo-mark">♞</span><span>Шахматы Ингушетии</span></a>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="history.html">История шахмат</a><a href="ingushetia.html">Ингушетия</a><a href="ingush-chess.html">Ингуши и шахматы</a><a href="game.html">Играть</a><a href="players.html" class="active" aria-current="page">Игроки</a></nav>
+  </header>
+  <main class="main">
+    <div class="history-title" data-reveal><span class="eyebrow">ШАХМАТНЫЙ КЛУБ</span><h1>Игроки</h1><p>Создавай участников клуба и следи за рейтингом.</p></div>
+    <section class="create-player" data-reveal>
+      <h2>Добавить игрока</h2>
+      <form id="playerForm" class="player-form">
+        <input id="playerName" maxlength="30" required placeholder="Имя игрока" aria-label="Имя игрока">
+        <button class="btn-primary" type="submit">＋ Добавить игрока</button>
+      </form>
+    </section>
+    <section class="players-list" data-reveal><h2>Список игроков</h2><div id="playersList" class="top3-container"><p class="empty">Пока игроков нет.</p></div></section>
+  </main>
+  <footer class="footer"><div class="footer-inner">
+    <div><p class="brand">♞ Шахматы Ингушетии</p><p>© 2026 · Играй честно. Думай на ход вперёд.</p></div>
+    <nav aria-label="Нижняя навигация"><a href="index.html">Главная</a><a href="history.html">История шахмат</a><a href="ingushetia.html">Ингушетия</a><a href="ingush-chess.html">Ингуши и шахматы</a><a href="game.html">Играть</a><a href="players.html">Игроки</a></nav>
+  </div></footer>
+  <script src="app.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
